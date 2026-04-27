@@ -30,5 +30,52 @@ public class Usuarios {
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public @NotBlank String getName() {
+        return name;
+    }
+
+    public void setName(@NotBlank String name) {
+        this.name = name;
+    }
+
+    public @Email @NotBlank String getEmail() {
+        return email;
+    }
+
+    public void setEmail(@Email @NotBlank String email) {
+        this.email = email;
+    }
+
+    public @NotBlank String getPassword() {
+        return password;
+    }
+
+    public void setPassword(@NotBlank String password) {
+        this.password = password;
+    }
+
+    public @NotNull TrainingLevel getTrainingLevel() {
+        return trainingLevel;
+    }
+
+    public void setTrainingLevel(@NotNull TrainingLevel trainingLevel) {
+        this.trainingLevel = trainingLevel;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
 }
 
