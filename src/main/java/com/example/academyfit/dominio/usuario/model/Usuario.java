@@ -1,4 +1,4 @@
-package com.example.academyfit;
+package com.example.academyfit.dominio.usuario.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -77,5 +77,7 @@ public class Usuario {
     public void setCreatedAt(LocalDateTime createdAt) {
         this.createdAt = createdAt;
     }
-}
+
+    }
+
 
