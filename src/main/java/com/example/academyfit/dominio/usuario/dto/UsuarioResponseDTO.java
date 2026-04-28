@@ -1,4 +1,6 @@
-package com.example.academyfit;
+package com.example.academyfit.dominio.usuario.dto;
+
+import com.example.academyfit.dominio.usuario.model.TrainingLevel;
 
 import java.time.LocalDateTime;
 

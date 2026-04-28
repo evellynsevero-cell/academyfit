@@ -1,5 +1,6 @@
-package com.example.academyfit;
+package com.example.academyfit.dominio.usuario.dto;
 
+import com.example.academyfit.dominio.usuario.model.TrainingLevel;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
