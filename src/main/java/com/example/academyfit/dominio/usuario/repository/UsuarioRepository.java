@@ -1,6 +1,7 @@
-package com.example.academyfit;
+package com.example.academyfit.dominio.usuario.repository;
 
 
+import com.example.academyfit.dominio.usuario.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
