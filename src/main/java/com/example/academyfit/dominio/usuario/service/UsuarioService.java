@@ -18,10 +18,10 @@ import java.util.List;
 public class UsuarioService {
 
     @Autowired
-    private static UsuarioRepository usuarioRepository;
+    private  UsuarioRepository usuarioRepository;
 
     @Autowired
-    private static PasswordEncoder passwordEncoder;
+    private  PasswordEncoder passwordEncoder;
 
     public  void deletar(Long id) {
         Usuario usuario = usuarioRepository.findById(id)
