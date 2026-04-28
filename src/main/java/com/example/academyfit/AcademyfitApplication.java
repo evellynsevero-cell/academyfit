@@ -1,4 +1,4 @@
-package com.example.academyfit.controller;
+package com.example.academyfit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
