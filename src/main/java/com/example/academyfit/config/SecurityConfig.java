@@ -26,9 +26,10 @@ public class SecurityConfig {
                                 "/swagger-ui.html", "/usuario", "/h2-console/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/usuario").permitAll()
                         .requestMatchers(HttpMethod.POST, "/exercicio/**", "/muscles/**", "/equipment/**").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().authenticated() //bloqueia todo resto
                 )
-                .httpBasic(Customizer.withDefaults());
+                .headers(headers -> headers.frameOptions(frame -> frame.disable())) // Necessário para o H2
+                .httpBasic(Customizer.withDefaults()); // Ativa o "Basic Auth"
 
         return http.build();
     }
@@ -44,4 +45,3 @@ public class SecurityConfig {
         return config.getAuthenticationManager();
     }
 }
-
