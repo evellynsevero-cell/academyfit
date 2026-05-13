@@ -17,6 +17,9 @@ public interface ExercicioRepository extends JpaRepository<Exercicio, Long> {
            também garante que cada exercício apareça apenas uma vez na lista
     *\
      */
+    //DAR UMA OLHADA NISSO
+    //TENHO QUE TER FILTRAGEM POR ID,NIVEL DE TREINAMENTO,
+    // Paginação
     @Query("SELECT DISTINCT obj FROM Exercicio obj " +
             "LEFT JOIN obj.equipamentos eq " +
             "LEFT JOIN obj.musculosPrimario pm " +
