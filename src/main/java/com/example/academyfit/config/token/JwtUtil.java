@@ -10,7 +10,7 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    @Value("${api.security.token.secret}")
+    @Value("${api.security.token.secret:chavePadraoParaTeste123}")
     private String secret;
 
     private long expiration = 3600000; // 1 hora em milissegundos
@@ -19,7 +19,7 @@ public class JwtUtil {
         return Jwts.builder()
                 .setSubject(email)
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
-                .signWith(SignatureAlgorithm.HS512, secret.getBytes())
+                .signWith(SignatureAlgorithm.HS256, secret.getBytes())
                 .compact();
     }
 
